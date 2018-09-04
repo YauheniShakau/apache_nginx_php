@@ -6,6 +6,8 @@ services:
     volumes:
       - ./src:/var/www/html
       - ./httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./httpd/server.crt:/usr/local/apache2/conf/server.crt
+      - ./httpd/server.key:/usr/local/apache2/conf/server.key  
     depends_on:
       - php
 
